@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryabhata</title>
+    <link rel="stylesheet" href="curtain.css">
+ <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        .cursor {
+            cursor: pointer;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+        
+        .row { /* Remove row:after, we will use flexbox instead */
+            text-align: center;
+            white-space: nowrap; /* Prevent wrapping */
+            overflow-x: auto; /* Enable horizontal scrolling if needed */
+        }
+        
+        .column {
+            display: inline-block;
+            width: 24%;
+            margin: 5px;
+            white-space: normal; /* Allow text inside to wrap */
+        }
+        
+        .demo {
+            opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+        
+        .mySlides iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        </style>
+</head>
+<body bgcolor="black">
+    <header>
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a href="curtain.html">Home</a>
+              <a href="learn.html">Learn</a>
+              <a href="community_chat.html">Community</a>
+            </div>
+          
+          </div>
+          
+          <!-- Use any element to open/show the overlay navigation menu -->
+          <h1><span onclick="openNav()" class="menu">ARYABHATA</span></h1>
+    </header>
+    <h2 style="text-align:center">Learn Psychology</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <iframe src="https://www.youtube.com/embed/vo4pMVb0R6M?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6" title="Intro to Psychology: Crash Course Psychology #1" allowfullscreen frameborder="0"></iframe>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <iframe src="https://www.youtube.com/embed/hFV71QPvX2I?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6" title="Psychological Research: Crash Course Psychology #2" allowfullscreen frameborder="0"></iframe>
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <iframe src="https://www.youtube.com/embed/W4N-7AlzK7s?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6" title="The Chemical Mind: Crash Course Psychology #3" allowfullscreen frameborder="0"></iframe>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <iframe src="https://www.youtube.com/embed/vHrmiy4W9C0?list=PL8dPuuaLjXtOPRKzVLY0jJY-uHOH9KVU6" title="Meet Your Master - Getting to Know Your Brain: Crash Course Psychology #4" allowfullscreen frameborder="0"></iframe>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="http://i.ytimg.com/vi/vo4pMVb0R6M/default.jpg" style="width:100%" onclick="currentSlide(1)" alt="Lecture 1">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://i.ytimg.com/vi/hFV71Dojp8Q/default.jpg" style="width:100%" onclick="currentSlide(2)" alt="Lecture 2">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://i.ytimg.com/vi/W4N-7AlzK7s/default.jpg" style="width:100%" onclick="currentSlide(3)" alt="Lecture 3">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="http://i.ytimg.com/vi/oMG2XHvzeuY/default.jpg" style="width:100%" onclick="currentSlide(4)" alt="Lecture 4">
+        </div>
+    </div>
+</div>
+
+
+    <script src = "curtain.js"></script>  
+
+
+    
+</body>
+</html>
